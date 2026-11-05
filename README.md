@@ -85,8 +85,7 @@ flowchart TD
 ### Instalación
 `ash
 # Clonar el repositorio
-git clone https://github.com/Tardigrado-76/agentes-independientes.git
-cd agentes-independientes
+# Repositorio privado enterprise (acceso confidencial bajo acuerdo NDA)
 
 # Instalar dependencias en el módulo deseado (ejemplo: Agent Evaluation Framework)
 cd "Agent Evaluation Framework — El TAU-benchGAIA"
@@ -107,3 +106,4 @@ Este repositorio cumple con las directrices internacionales para la automatizaci
 
 ## 6. Licencia y Gobernanza
 Distribuido bajo licencia propietaria enterprise con salvaguardas de gobernanza. Para auditorías externas y certificaciones técnicas, contactar con la dirección del proyecto.
+
