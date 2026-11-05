@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QuantigradeSeamSpecification",
+  "type": "object",
+  "properties": {
+    "module_name": { "type": "string" },
+    "seam_description": { "type": "string" },
+    "public_interface": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol_name": { "type": "string" },
+          "symbol_type": { "type": "string", "enum": ["function", "class", "async_function"] },
+          "inputs": { "type": "object" },
+          "return_type": { "type": "string" }
+        },
+        "required": ["symbol_name", "symbol_type"]
+      }
+    },
+    "deletion_test_guarantee": {
+      "type": "string",
+      "description": "Details why callers remain unmodified if module implementation is replaced"
+    },
+    "test_surface_target": {
+      "type": "string",
+      "description": "Path to test suite testing exclusively through this seam"
+    }
+  },
+  "required": ["module_name", "public_interface", "test_surface_target"]
+}

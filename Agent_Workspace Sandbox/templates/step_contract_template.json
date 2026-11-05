@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "QuantigradeStepContract",
+  "type": "object",
+  "properties": {
+    "step_id": { "type": "string" },
+    "feature_name": { "type": "string" },
+    "whiteboard_diagram_sha256": { "type": "string" },
+    "target_files": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "forbidden_imports": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "max_lines_budget": { "type": "integer", "default": 200 },
+    "required_tests": {
+      "type": "array",
+      "items": { "type": "string" }
+    },
+    "hitl_approval_required": { "type": "boolean", "default": false }
+  },
+  "required": ["step_id", "feature_name", "target_files", "forbidden_imports"]
+}

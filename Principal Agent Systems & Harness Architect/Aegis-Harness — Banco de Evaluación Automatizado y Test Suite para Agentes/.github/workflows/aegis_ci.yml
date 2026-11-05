@@ -1,0 +1,46 @@
+name: Aegis-Harness CI & Quality Gate
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  evaluation-gate:
+    name: Run Aegis Quality Gate (Zero Docker)
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Setup Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: "pip"
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e .
+
+      - name: Run Unit & Integration Tests
+        run: |
+          pytest tests -v
+
+      - name: Execute Aegis 120-Test Battery
+        run: |
+          python -m aegis.runner
+
+      - name: Verify Audit Ledger Integrity
+        run: |
+          python -c "from aegis.ledger import AuditLedger; valid, count, err = AuditLedger().verify_integrity(); assert valid, f'Ledger error: {err}'; print(f'Ledger OK: {count} blocks')"
+
+      - name: Upload Evaluation Reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: aegis-evaluation-reports
+          path: reports/
