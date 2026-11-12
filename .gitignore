@@ -68,3 +68,8 @@ desktop.ini
 *.key
 *.db
 *.sqlite3
+
+*.lnk
+*.pdf
+logs/
+*.log

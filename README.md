@@ -67,6 +67,14 @@ flowchart TD
 - **CFO Legal Guard & CFO Director Financiero Autónomo**: Agente supervisor contable y legal que concilia balances bancarios, detecta discrepancias de flujo de caja y verifica el cumplimiento de normativas fiscales.
 - **Factoria_Agentes_Regulados**: Pipeline CI/CD para generar nuevos perfiles de agentes con barreras de seguridad (guardrails) integradas de fábrica.
 
+### 3.4. Empleados de IA Autónomos Especializados (Autonomous Enterprise Workforce)
+- **d-manager-employee**: Gestor autónomo de publicidad de pago (Meta/Google Ads), optimización continua de creatividades y control de techo de gasto (*spend ceiling*).
+- **customer-satisfaction-employee**: Mesa de soporte y retención autónoma con detección temprana de churn, triaje de defectos y enrutamiento confidencial bajo RGPD.
+- **sales-employee**: Representante de ventas digital (SDR) para prospección B2B basada en señales reales de mercado y redacción hiperpersonalizada de propuestas.
+- **seo-employee**: Especialista en posicionamiento orgánico en buscadores tradicionales y motores de respuesta generativa (AEO: ChatGPT Search, Perplexity, Claude).
+- **social-media-employee**: Operador de presencia y liderazgo de opinión B2B (LinkedIn/X) con perfil de voz corporativa y ventana de revisión nocturna en disco.
+- **web-dev-employee**: Ingeniero autónomo de mantenimiento web, observabilidad continua de uptime y generación de hotfixes aislados en ramas Git seguras.
+
 ### 3.3. Operaciones, Ventas y Desarrollo
 - **SWE_FLEET**: Enjambre de agentes de ingeniería de software capaces de diagnosticar incidencias, escribir tests de regresión y refactorizar código sin supervisión humana directa.
 - **Omni Contact Center**: Centro de operaciones autónomo capaz de resolver peticiones complejas en múltiples canales (tickets, mensajería, ERP).
@@ -106,4 +114,5 @@ Este repositorio cumple con las directrices internacionales para la automatizaci
 
 ## 6. Licencia y Gobernanza
 Distribuido bajo licencia propietaria enterprise con salvaguardas de gobernanza. Para auditorías externas y certificaciones técnicas, contactar con la dirección del proyecto.
+
 
